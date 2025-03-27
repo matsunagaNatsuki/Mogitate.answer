@@ -1,0 +1,137 @@
+body{
+    background-color: rgb(245, 245, 245);
+}
+.all-contents{
+    display: flex;/**子要素を横に並べる*/
+}
+.left-contents{
+    margin-left: 50px;/**左余白を50pxに設定し、余白を確保*/
+    width: 300px;
+}
+.keyword{
+    width: 240px;
+    height: 40px;
+    border-radius: 20px;/*丸い角**/
+    border-width: thin;/**枠線の太さを細くする*/
+}
+.submit-button{
+    display: block;
+    border: none;
+    background-color: rgb(255, 200, 0);
+    border-radius: 5px;/**角を少し丸く*/
+    width: 240px;
+    height: 40px;
+    margin-top: 20px;/**上の余白を空ける*/
+    box-shadow: 4px 4px rgb(224, 224, 224);/**ボタンの影*/
+}
+.select-label{
+    display: inline-block;
+    font-weight: bold;/**太字*/
+    font-size: 20px;
+    margin-top: 25px;
+}
+.select{
+    display: block;
+    width: 240px;
+    height: 40px;
+    margin-top: 20px;
+}
+.sort_contents{
+    display: flex;/*横並び*/
+    width: 150px;
+    height: 40px;
+    margin-top: 10px;
+    border-radius: 20px;/*丸い角*/
+    border: rgb(255, 200, 0) solid;
+}
+.searched_data{
+    margin-left: 10px;/*左に余白*/
+    margin-top: 7px;/*上に余白*/
+}
+.close-content{
+    width: 20px;
+    height: 20px;
+}
+.img-close-icon{
+    margin-left: 10px;
+    margin-top: 8px;
+    width: 20px;
+    height: 20px;
+}
+.add-button{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    background-color: rgb(255, 145, 0);
+    height: 40px;
+    width: 120px;
+    text-align: center;/*ボタンのテキストを中央揃え*/
+    border-radius: 5px;/*角を丸く*/
+    padding-top: 7px;
+    margin-left: 700px;
+    box-shadow: 4px 4px rgb(224, 224, 224);
+}
+.right-contents{
+    margin-top: 30px;/*上の余白を追加*/
+}
+.product-contents{
+    display: flex;/*横並びレイアウト*/
+    flex-wrap: wrap;/*コンテンツが幅を超えた場合に折り返す*/
+    width: 900px;
+}
+.product-content{
+    margin: 3px;
+    width: 270px;
+    box-shadow: 4px 4px rgb(224, 224, 224);
+    position: relative;/*相対配置*/
+}
+.product-link{
+    position: absolute;/*リンクを親要素に重ねて配置*/
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.img-content{
+    width: 270px;
+    height: 160px;/*画像のサイズ*/
+}
+.detail-content{
+    display: flex;/*子要素を横に並べる*/
+    background-color: white;
+    height: 45px;
+}
+.pagination-content{
+    text-align: center;/*テキストを中央揃え*/
+    display: flex;/*全体の要素を横並びにする*/
+    justify-content: center;/*中央配置*/
+}
+.pagination{
+    display: flex;/*番号を横並びにする*/
+    margin-left: -90px;
+}
+.page-item-active {
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;/*角を完全に丸く*/
+    background-color: rgb(255, 200, 0);
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 7px;/*テキスト中央揃え*/
+}
+.page-item{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;/*丸い形状*/
+    background-color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 7px;/*テキストの位置を内側余白に調節*/
+}
+.page-link{
+    text-decoration: none;/*下線を消す*/
+    color: black;
+}
+.page-link-active{
+    color: white;
+}

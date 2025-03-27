@@ -1,0 +1,86 @@
+body {
+    background-color: rgb(245, 245, 245);
+}
+
+.main-contents {
+    width: 650px;
+    background-color: rgb(245, 245, 245);
+    margin-left: auto;
+    margin-right: auto;/*左右の余白をautoに設定することで要素を中央に配置*/
+}
+
+.label {
+    display: block;/*ブロック要素でラベルを縦に配置*/
+    margin-top: 20px;
+    margin-bottom: 5px;/*上の間隔を空ける*/
+}
+
+.text {
+    display: inline-block;/*インラインブロックで横並びが可能*/
+    width: 650px;
+    height: 30px;
+}
+
+.textarea {
+    width: 650px;
+    height: 150px;
+}
+
+::placeholder {
+    color: grey;
+}
+
+.require {
+    text-align: center;/*テキストを中央揃え*/
+    display: inline-block;/*横並びにする*/
+    color: white;
+    background-color: red;
+    width: 40px;
+    height: 18px;
+    font-size: 13px;
+    margin-left: 10px;
+}
+
+.note {
+    color: red;
+    width: 30px;
+    height: 15px;
+    font-size: 13px;
+    margin-left: 10px;
+}
+
+.button-content {
+    margin-top: 20px;/*上の間隔を空ける*/
+    text-align: center;/*内容を中央に配置*/
+}
+
+.back {
+    display: inline-block;/*横並びに対応*/
+    width: 200px;
+    height: 40px;
+    color: black;
+    background-color: rgb(214, 214, 214);
+    text-decoration: none;/*下線を削除*/
+    border-radius: 5px;/*角を丸く*/
+    box-shadow: 4px 4px rgb(224, 224, 224);
+    padding-top: 8px;
+}
+
+.button-register {
+    width: 200px;
+    height: 40px;
+    border: none;/*ボーダー線を削除*/
+    background-color: gold;
+    border-radius: 5px;/*角を丸く*/
+    box-shadow: 4px 4px rgb(224, 224, 224);
+}
+
+.input_error_message {
+    color: red;
+}
+
+.reader_image {
+    width: 350px;
+    height: 200px;
+    margin-bottom: 20px;
+}
