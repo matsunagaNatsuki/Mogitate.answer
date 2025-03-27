@@ -6,7 +6,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 //テストデータを作成するための機能
 use Illuminate\Database\Eloquent\Model;
-//Eloquent　ORMを使用するために必要な基本機能を読み込み、データベースのテーブルと対応するクラスを定義するための基盤を提供する。
+//EloquentORMを使用するために必要な基本機能を読み込み、データベースのテーブルと対応するクラスを定義するための基盤を提供する。
 
 #Productクラス
 class Product extends Model//Model(データベースと連携している基本機能を引き継いでいる)
