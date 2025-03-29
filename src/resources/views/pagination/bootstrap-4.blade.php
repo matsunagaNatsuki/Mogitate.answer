@@ -1,21 +1,22 @@
 @if ($paginator->hasPages())<!--ページ数が複数ある時、ページネーションを表示-->
 <nav>
     <ul class="pagination"><!--ページネーションをリスト形式で表示-->
-        {{-- Previous Page Link --}}
-        @if ($paginator->onFirstPage())
-            <li class="page-item disabled" aria-disabled="true" aria-label="@lang('pagination.previous')">
+        {{-- Previous Page Link --}}<!--前のページのリンク部分-->
+        @if ($paginator->onFirstPage())<!--現在のページが最初のページの場合-->
+            <li class="page-item disabled" aria-disabled="true" aria-label="@lang('pagination.previous')"><!--「前へ」というラベルを設定し、このリンクは無効である-->
                 <span class="page-link" aria-hidden="true">&lsaquo;</span>
             </li>
-        @else
+        @else<!--現在のページが最初のページででない場合-->
             <li class="page-item">
                 <a class="page-link" href="{{ $paginator->previousPageUrl() }}" rel="prev" aria-label="@lang('pagination.previous')">&lsaquo;</a>
+                <!--前のページのリンクURLを取得。このページが「前のページ」へのものであることを示す-->
             </li>
         @endif
 
         {{-- Pagination Elements --}}
-        @foreach ($elements as $element)
+        @foreach ($elements as $element)<!--すべてのページネーション要素をループで処理する-->
             {{-- "Three Dots" Separator --}}
-            @if (is_string($element))
+            @if (is_string($element))<!--$elementが文字列である場合に処理する-->
                 <li class="page-item disabled" aria-disabled="true"><span class="page-link">{{ $elements }}</span></li>
             @endif
 
