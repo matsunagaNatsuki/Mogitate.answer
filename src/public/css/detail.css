@@ -1,0 +1,109 @@
+body {
+    background-color: rgb(245, 245, 245);
+}
+
+.all-contents {
+    width: 800px;/**コンテンツの幅を800pxに設定*/
+    margin: 0 auto;/**ページの中央に配置*/
+    background-color: rgb(245, 245, 245);
+}
+
+.top-contents {
+    display: flex;/**画像やテキストを横に並べる*/
+}
+
+.right-content {
+    margin-left: 30px;/*右側のコンテンツの左に30pxの余白をつける*/
+}
+
+.span-item {
+    color: rgb(0, 149, 255);/**テキストの色を青に設定*/
+}
+
+.img-content {
+    width: 350px;
+    height: 250px;/*画像の幅を設定*/
+}
+
+.image {
+    display: block;/*画像を一つのブロック要素として表示*/
+}
+
+.text { /*商品説明の入力欄*/
+    display: block;/*単独で表示*/
+    width: 400px;
+    height: 40px;
+    margin-top: 10px;/*上の余白*/
+    border-radius: 5px;/*角を丸くする*/
+    border: 1px solid black;/*黒い枠線を1pxの太さでつける*/
+}
+
+.name-label {
+    display: block;/*各ラベルを一つの段落として縦に並べる*/
+    margin-top: 55px;/*余白*/
+    font-size: 15px;/*ラベルの文字サイズ*/
+}
+
+.price-label {
+    display: block;
+    margin-top: 30px;
+    font-size: 15px;
+}
+
+.season-label {
+    display: block;
+    margin-top: 30px;
+    font-size: 15px;
+}
+
+.description-label {
+    display: block;
+    margin-top: 30px;
+    font-size: 15px;
+}
+
+.product-description { /*商品説明用のテキストボックス*/
+    width: 800px;
+    height: 100px;
+    border-radius: 5px;/*枠を丸くする*/
+    border: 1px solid black;/*枠線を太くする*/
+}
+
+.button-content {
+    margin-top: 20px;/*上の余白*/
+    text-align: center;/*中央揃え*/
+}
+
+.back {
+    display: inline-block;/*ボタンを横に並べる*/
+    width: 200px;
+    height: 40px;
+    color: black;
+    background-color: rgb(214, 214, 214);
+    text-decoration: none;/*下線を無くす*/
+    border-radius: 5px;/*ボタンの丸を丸くする*/
+    box-shadow: 4px 4px rgb(224, 224, 224);
+    padding-top: 8px;/*ボタン内の文字の上に少しスペースを空ける*/
+    margin-left: 170px;
+}
+
+.button-change {
+    width: 200px;
+    height: 40px;
+    border: none;/*ボタンの枠線を無くす*/
+    background-color: gold;
+    border-radius: 5px;/*ボタンの角を丸くする*/
+    box-shadow: 4px 4px rgb(224, 224, 224);
+}
+
+.trash-can-content { /**ゴミ箱アイコン
+    display: inline-block; /*他の要素と横並びに配置できるブロック要素する*/
+    width: 40px;
+    height: 40px;
+    margin-left: 150px;/*左側に150pxアイコンを右寄せする。*/
+}
+
+.img-trash-can {
+    width: 25px;
+    height: 25px;
+}

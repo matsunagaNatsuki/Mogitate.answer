@@ -16,7 +16,7 @@
             <div class="top-contents">
                 <div class="left-content">
                     <p><span class="span-item">商品一覧></span>{{$product->name}}</p>
-                    <img src="{{ asset($product->image) }}" alt="店内画像" class="img-content" />
+                    <img src="{{ asset('storage/app/public/images }}" alt="店内画像" class="img-content" />
                 </div>
                 <div class="right-content">
                     <label class="name-label">商品名</label>
