@@ -23,12 +23,9 @@
                     <input type="text" placeholder="{{$product->price}}" name="product_price" class="text">
                     <label class="season-label">季節</label>
                     @foreach ($seasons as $season)
-                        <label for="season">{{$season->name}}</label>
-                        @if($product->checkSeason($season,$product) == "no")
-                            <input type="checkbox" id="season" value="{{$season->id}}">
-                        @elseif($product->checkSeason($season,$product) == "yes")
-                            <input type="checkbox" id="season" value="{{$season->id}}" checked>
-                        @endif
+                        <label for="season_{{ $season->id }}">{{ $season->name }}</label>
+                        <input type="checkbox" id="season_{{ $season->id }}" name="seasons[]" value="{{ $season->id }}"
+                        {{ $product->seasons->contains('id', $season->id) ? 'checked' : '' }}>
                     @endforeach
                 </div>
             </div>

@@ -20,8 +20,7 @@ class CreateProductsTable extends Migration//このファイルの全体の名�
             $table->integer('price');//値段を保存。数字のみ入力可。
             $table->string('image')->nullable();//画像を保存。nullable=画像がない場合でもOK
             $table->text('description');//商品説明を保存。長い文章が入力できる
-            $table->timestamp('create_at')->useCurrent()->nullable();
-            $table->timestamp('update_at')->useCurrent()->nullable();
+            $table->timestamps();
             /**データの作成と更新の時間を自動で保存する
                 *useCurrent():=今の時刻を自動で設定する
                 *nullable():=空でもOK**/

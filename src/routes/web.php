@@ -25,6 +25,8 @@ Route::get('/products/detail/{product_id}', [ProductController::class, 'getDetai
  * {product_id}は個別の製品IDを表す
 */
 
+Route::post('/products/update', [ProductController::class, 'update'])->name('product.update');
+
 #商品検索フォーム
 Route::get('/products/search', [ProductController::class, 'getSearch']);
 // /products/searchがGETリクエストが送られたときProductControllerのgetSearchメソッドが実行され、商品を検索するためのフォームを表示する

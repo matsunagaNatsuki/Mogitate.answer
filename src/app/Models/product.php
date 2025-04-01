@@ -36,7 +36,7 @@ class Product extends Model//Model(データベースと連携している基本
         foreach ($productSeasons as $productSeason)
         //商品に関連づけられた季節のリストでforeachループを使用してリスト内すべての季節を順番にチェックする。
         {
-            if($productSeason->id == $season_id)
+            if(($productSeason->id ?? null) == $season_id)
             //各季節（$productSeason)のIDが指定された季節のID（$season_id)と一致しているか確認している
             {
                 $returnTxt ="yes";
@@ -45,7 +45,7 @@ class Product extends Model//Model(データベースと連携している基本
             }
         }
 
-        if($productSeason->id != $season_id)
+        if(isset($productSeason) && $productSeason->id != $season_id)
         //季節IDが$season_idと違うか確認している。
         {
             $returnTxt ="no";
