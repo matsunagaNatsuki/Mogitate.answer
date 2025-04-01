@@ -17,7 +17,7 @@ class Product extends Model//Model(データベースと連携している基本
     public function seasons()
     {
         return $this->belongsToMany(Season::class,'product_season','product_id','season_id',);
-        //「多対多」の関係を定義し、一つの商品が複数雨の季節に関連助けられる。
+        //「多対多」の関係を定義し、一つの商品が複数季節に関連助けられる。
     }
 
     //checkSeasonメソッド
