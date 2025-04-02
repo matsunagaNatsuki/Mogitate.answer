@@ -29,7 +29,7 @@ class ProductRequest extends FormRequest/**FormRequestクラスを継承し、�
         return [
             'product_name' => 'required',
             'product_price' => 'required|integer|between:0,10000',
-            'product_image' => 'required|mimes:png,jpeg',
+
             'product_season' => 'required|array',
             'product_description' => 'required|max:120'
         ];

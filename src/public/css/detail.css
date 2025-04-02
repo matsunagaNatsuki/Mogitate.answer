@@ -107,3 +107,9 @@ body {
     width: 25px;
     height: 25px;
 }
+
+.div.error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 4px;
+}
