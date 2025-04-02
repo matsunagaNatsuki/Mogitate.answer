@@ -9,8 +9,9 @@
 </head>
 <body>
     <div class="all-contents">
-        <form action="/update" method ="POST">
-        @csrf
+        <form action="/products/update" method ="POST">
+            @csrf
+            <input type="hidden" name="product_id" value="{{ $product->id }}">
             <div class="top-contents">
                 <div class="left-content">
                     <p><span class="span-item">商品一覧></span>{{$product->name}}</p>

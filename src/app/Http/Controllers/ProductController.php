@@ -178,9 +178,33 @@ class ProductController extends Controller
 
     public function getDetail($product_id)
     {
-        $product = Product::find($product_id);
+        $product = Product::with('seasons')->find($product_id);
         $seasons = Season::all();
 
         return view('detail', compact('product','seasons'));
     }
+
+    public function update(Request $request)
+    {
+        $request->validate([
+            'product_name' => 'required|string|max:255',
+        ]);
+
+        $product = Product::find($request->input('product_id')); // 商品情報を取得
+
+        if (!$product) {
+            abort(404);
+        }
+
+        $product->update([
+            'name' => $request->input('product_name'),
+            'price' => $request->input('product_price'),
+            'description' => $request->input('product_description'),
+    ]);
+
+    $product->seasons()->sync($request->input('seasons', []));
+
+    return redirect('/products'); // 商品一覧画面にリダイレクト
+}
+
 }
