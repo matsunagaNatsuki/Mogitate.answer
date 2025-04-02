@@ -184,7 +184,7 @@ class ProductController extends Controller
         return view('detail', compact('product','seasons'));
     }
 
-    public function update(Request $request)
+    public function update(ProductRequest $request)
     {
         $request->validate([
             'product_name' => 'required|string|max:255',

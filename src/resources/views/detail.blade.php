@@ -22,6 +22,7 @@
                     <input type="text" placeholder="{{$product->name}}" name="product_name" class="text">
                     <label class="price-label">値段</label>
                     <input type="text" placeholder="{{$product->price}}" name="product_price" class="text">
+                    </span>
                     <label class="season-label">季節</label>
                     @foreach ($seasons as $season)
                         <label for="season_{{ $season->id }}">{{ $season->name }}</label>
