@@ -20,21 +20,33 @@
                 <div class="right-content">
                     <label class="name-label">商品名</label>
                     <input type="text" placeholder="{{$product->name}}" name="product_name" class="text">
+                    @error('product_name')
+                        <div class="error">{{ $message }}</div>
+                    @enderror
                     <label class="price-label">値段</label>
                     <input type="text" placeholder="{{$product->price}}" name="product_price" class="text">
+                    @error('product_price')
+                        <div class="error">{{ $message }}</div>
+                    @enderror
                     </span>
                     <label class="season-label">季節</label>
                     @foreach ($seasons as $season)
+                        <input type="checkbox" id="season_{{ $season->id }}" name="product_season[]" value="{{ $season->id }}"
+                        {{ in_array($season->id, old('product_season',$selectedSeasons ?? [])) ? 'checked' : ''}}>
                         <label for="season_{{ $season->id }}">{{ $season->name }}</label>
-                        <input type="checkbox" id="season_{{ $season->id }}" name="seasons[]" value="{{ $season->id }}"
-                        {{ $product->seasons->contains('id', $season->id) ? 'checked' : '' }}>
                     @endforeach
+                    @error('product_season')
+                        <div class="error">{{ $message }}</div>
+                    @enderror
                 </div>
             </div>
             <div class="under-content">
                 <input type="file" id="product_image" class="image" name="product_image">
                 <label class="description-label">商品説明</label>
                 <textarea cols="30" rows="5" name="product_description" class="product-description">{{$product->description}}</textarea>
+                @error('product_description')
+                    <div class="error">{{ $message }}</div>
+                @enderror
                 <div class="button-content">
                     <a href="/products" class="back">戻る</a>
                     <button type="submit" class="button-change">変更を保存</button>

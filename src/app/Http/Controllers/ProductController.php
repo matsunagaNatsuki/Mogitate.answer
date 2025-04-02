@@ -186,9 +186,6 @@ class ProductController extends Controller
 
     public function update(ProductRequest $request)
     {
-        $request->validate([
-            'product_name' => 'required|string|max:255',
-        ]);
 
         $product = Product::find($request->input('product_id')); // 商品情報を取得
 
