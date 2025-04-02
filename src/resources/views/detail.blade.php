@@ -16,6 +16,9 @@
                 <div class="left-content">
                     <p><span class="span-item">商品一覧></span>{{$product->name}}</p>
                     <img src="{{ asset($product->image) }}"  alt="店内画像" class="img-content"/>
+                    @error('product_image')
+                        <div class="error">{{ $message }}</div>
+                    @enderror
                 </div>
                 <div class="right-content">
                     <label class="name-label">商品名</label>
