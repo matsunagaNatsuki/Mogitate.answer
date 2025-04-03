@@ -8,6 +8,13 @@ body {
     background-color: rgb(245, 245, 245);
 }
 
+.error {
+    color: red !important;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
 .top-contents {
     display: flex;/**画像やテキストを横に並べる*/
 }
@@ -15,6 +22,7 @@ body {
 .right-content {
     margin-left: 30px;/*右側のコンテンツの左に30pxの余白をつける*/
 }
+
 
 .span-item {
     color: rgb(0, 149, 255);/**テキストの色を青に設定*/
@@ -108,8 +116,3 @@ body {
     height: 25px;
 }
 
-.div.error {
-    color: red;
-    font-size: 0.9em;
-    margin-top: 4px;
-}
