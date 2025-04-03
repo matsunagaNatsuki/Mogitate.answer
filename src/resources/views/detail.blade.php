@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="all-contents">
-        <form action="/products/update" method ="POST">
+        <form action="/products/update" method ="POST" enctype="multipart/form-data">
             @csrf
             <input type="hidden" name="product_id" value="{{ $product->id }}">
             <div class="top-contents">

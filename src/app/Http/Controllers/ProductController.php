@@ -186,7 +186,6 @@ class ProductController extends Controller
 
     public function update(ProductRequest $request)
     {
-
         $product = Product::find($request->input('product_id')); // 商品情報を取得
 
         if (!$product) {
