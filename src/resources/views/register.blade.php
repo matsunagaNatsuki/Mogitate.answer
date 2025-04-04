@@ -38,7 +38,7 @@
                 @enderror
             <label class="label">季節<span class="require">必須</span><span class="note">複数選択可</span></label>
                 @foreach ($seasons as $season)
-            <input type="checkbox" id="season" value="{{$season->id}}" name="product_season">
+            <input type="checkbox" id="season" value="{{$season->id}}" name="product_season[]">
             <label for="season">{{$season->name}}</label>
                 @endforeach
                 @error('product_season')

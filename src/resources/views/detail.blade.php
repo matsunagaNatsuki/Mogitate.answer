@@ -46,7 +46,7 @@
             <div class="under-content">
                 <input type="file" id="product_image" class="image" name="product_image">
                 <label class="description-label">商品説明</label>
-                <textarea cols="30" rows="5" name="product_description" class="product-description">{{$product->description}}</textarea>
+                <textarea cols="30" rows="5"  placeholder="{{$product->description}}" name="product_description" class="product-description">{{$product->description}}</textarea>
                 @error('product_description')
                     <div class="error">{{ $message }}</div>
                 @enderror
@@ -62,6 +62,5 @@
             </div>
         </form>
     </div>
-    <script src="{{ asset('js/script.js') }}"></script>
 </body>
 </html>

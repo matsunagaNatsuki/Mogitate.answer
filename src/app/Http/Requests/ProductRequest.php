@@ -31,6 +31,7 @@ class ProductRequest extends FormRequest/**FormRequestクラスを継承し、�
             'product_price' => 'required|integer|between:0,10000',
             'product_image' => 'required|mimes:png,jpg,jpeg|max:2048',
             'product_season' => 'required|array',
+            'product_season.*' => 'integer',
             'product_description' => 'required|max:120'
         ];
     }
